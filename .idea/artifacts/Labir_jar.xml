@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Labir:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Labir_jar</output-path>
+    <root id="archive" name="Labir.jar">
+      <element id="module-output" name="Labir" />
+    </root>
+  </artifact>
+</component>
