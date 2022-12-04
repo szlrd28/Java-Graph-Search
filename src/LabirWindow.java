@@ -14,7 +14,6 @@ public class LabirWindow extends ColorMaker {
     public final static int NEGYZET_MERET = 100,
 
 
-
     URES = 0,
             FAL = 1,
             KEZDES = 2,
@@ -22,7 +21,7 @@ public class LabirWindow extends ColorMaker {
             NYITOTT = 4,
             ZART = 5,
 
-            UT = 6;
+    UT = 6;
 
     public static Color VERY_DARK_GREEN = new Color(0, 102, 0);
     public static Color VERY_LIGHT_RED = new Color(153, 0, 0);
@@ -38,9 +37,9 @@ public class LabirWindow extends ColorMaker {
     static JLabel cim;
     static JLabel cim1;
     static JLabel kezdes;
-   static JLabel cel;
+    static JLabel cel;
     static JLabel ut;
-   static JLabel nyitott;
+    static JLabel nyitott;
     static JLabel zart;
     static JLabel sebesseg;
 
@@ -61,9 +60,6 @@ public class LabirWindow extends ColorMaker {
     static int kesleltetes;
     static int kiterjesztett;
     static JFrame f;
-
-
-    static JCheckBox szamolas;
     static Timer ido;
     Recolor action = new Recolor();
 
@@ -201,9 +197,6 @@ public class LabirWindow extends ColorMaker {
         add(aStar2);
 
 
-
-
-
         aboutButton = new JButton("About");
         aboutButton.addActionListener(new AlgorithmsMentor());
         aboutButton.setBackground(Color.lightGray);
@@ -211,15 +204,15 @@ public class LabirWindow extends ColorMaker {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JDialog d = new JDialog(f, "Készitő");
-                JLabel l = new JLabel("Hompoth Szilárd - FQR9QJ " +
-                        ", szilardhompoth@gmail.com");
+                JPanel p = new JPanel();
+                JLabel l = new JLabel("<html>Hompoth Szilárd - FQR9QJ " + "<br/><br/>szilardhompoth@gmail.com</html>", SwingConstants.CENTER);
                 d.add(l);
                 l.setFont(new Font("Helvetica", Font.PLAIN, 20));
-                d.setLocation(700,200);
+                d.setLocation(700, 200);
                 d.setSize(550, 300);
                 d.setVisible(true);
             }
-        }) ;
+        });
 
 
         dfs.setSelected(true);
@@ -248,7 +241,7 @@ public class LabirWindow extends ColorMaker {
 
         aboutButton.setBounds(10 + (szelesseg - 160) * 17 / 20, magassag - 725, (szelesseg - 60) * 5 / 20, 28);
         info.setBounds(15, magassag - 155, szelesseg - 30, 23);
-       kezdes.setBounds(10 + (szelesseg - 160) * 17 / 20, magassag - 690, (szelesseg - 60) * 5 / 20, 28);
+        kezdes.setBounds(10 + (szelesseg - 160) * 17 / 20, magassag - 690, (szelesseg - 60) * 5 / 20, 28);
         cel.setBounds(10 + (szelesseg - 160) * 17 / 20, magassag - 670, (szelesseg - 60) * 5 / 20, 28);
         nyitott.setBounds(10 + (szelesseg - 160) * 17 / 20, magassag - 650, (szelesseg - 60) * 5 / 20, 28);
         zart.setBounds(10 + (szelesseg - 160) * 17 / 20, magassag - 630, (szelesseg - 60) * 5 / 20, 28);
